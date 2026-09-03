@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin/', '/api/'],
     },
-    sitemap: 'https://turbandigitalstudio.com/sitemap.xml',
+    sitemap: 'https://www.turbandigitalstudio.in/sitemap.xml',
   }
 }

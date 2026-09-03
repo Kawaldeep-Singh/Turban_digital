@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://turbandigitalstudio.com'),
+  metadataBase: new URL('https://www.turbandigitalstudio.in'),
   title: {
     default: "Turban Digital Studio | Top Digital Marketing Agency in Gurgaon",
     template: "%s | Turban Digital Studio"
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://turbandigitalstudio.com",
+    url: "https://www.turbandigitalstudio.in",
     siteName: "Turban Digital Studio",
     title: "Turban Digital Studio | Top Digital Marketing Agency in Gurgaon",
     description: "Stop losing leads to competitors. We build digital engines that drive real revenue through SEO, Performance Marketing, and Web Development.",

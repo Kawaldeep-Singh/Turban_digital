@@ -180,7 +180,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-2 text-slate-400">
               <span className="material-symbols-outlined text-[18px]">mail</span>
-              <span className="text-[14px] font-medium">hello@turbandigitalstudio.com</span>
+              <span className="text-[14px] font-medium">hello@turbandigitalstudio.in</span>
             </div>
           </div>
           
