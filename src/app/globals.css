@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-text-muted: #64748B;
+  --color-on-tertiary-container: #ffded2;
+  --color-error-container: #ffdad6;
+  --color-surface-dim: #d8dadc;
+  --color-inverse-surface: #2d3133;
+  --color-success-green: #10B981;
+  --color-text-main: #1A1D21;
+  --color-tertiary-container: #b43f00;
+  --color-on-primary-container: #dfe3ff;
+  --color-on-secondary: #ffffff;
+  --color-surface-container-highest: #e0e3e5;
+  --color-tertiary-fixed: #ffdbce;
+  --color-primary-fixed-dim: #b7c4ff;
+  --color-on-error-container: #93000a;
+  --color-error: #ba1a1a;
+  --color-outline-variant: #c3c5d9;
+  --color-on-surface-variant: #434656;
+  --color-tertiary: #8c2f00;
+  --color-on-primary-fixed: #001452;
+  --color-on-error: #ffffff;
+  --color-outline: #737688;
+  --color-on-tertiary-fixed-variant: #802a00;
+  --color-secondary-fixed-dim: #c5c6cc;
+  --color-primary-container: #0052ff;
+  --color-secondary: #5c5e63;
+  --color-primary-fixed: #dde1ff;
+  --color-on-surface: #191c1e;
+  --color-surface-bright: #f7f9fb;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f6;
+  --color-secondary-container: #e1e2e8;
+  --color-on-primary-fixed-variant: #0038b6;
+  --color-on-tertiary: #ffffff;
+  --color-surface-variant: #e0e3e5;
+  --color-surface-tint: #004ced;
+  --color-on-secondary-container: #626469;
+  --color-surface-container-high: #e6e8ea;
+  --color-primary: #0084D1;
+  --color-surface: #f7f9fb;
+  --color-on-background: #191c1e;
+  --color-surface-container: #eceef0;
+  --color-on-secondary-fixed-variant: #44474b;
+  --color-surface-border: #E2E8F0;
+  --color-inverse-primary: #b7c4ff;
+  --color-secondary-fixed: #e1e2e8;
+  --color-on-primary: #ffffff;
+  --color-inverse-on-surface: #eff1f3;
+  --color-on-secondary-fixed: #191c20;
+  --color-tertiary-fixed-dim: #ffb59a;
+  --color-on-tertiary-fixed: #370e00;
+  --color-creative-purple: #00AFA0;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-section-gap: 80px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-lg: 32px;
+  --spacing-margin-desktop: 40px;
+  --spacing-stack-md: 16px;
+
+  --font-headline-sm: Lexend, sans-serif;
+  --font-label-md: Inter, sans-serif;
+  --font-body-lg: Inter, sans-serif;
+  --font-label-sm: Inter, sans-serif;
+  --font-body-md: Inter, sans-serif;
+  --font-headline-xl: Lexend, sans-serif;
+  --font-headline-lg: Lexend, sans-serif;
+  --font-headline-md: Lexend, sans-serif;
+  --font-headline-lg-mobile: Lexend, sans-serif;
+
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 32px;
+  --text-headline-sm--font-weight: 600;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--font-weight: 500;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-headline-xl: 60px;
+  --text-headline-xl--line-height: 72px;
+  --text-headline-xl--letter-spacing: -0.02em;
+  --text-headline-xl--font-weight: 700;
+
+  --text-headline-lg: 48px;
+  --text-headline-lg--line-height: 56px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-md: 36px;
+  --text-headline-md--line-height: 44px;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-lg-mobile: 32px;
+  --text-headline-lg-mobile--line-height: 40px;
+  --text-headline-lg-mobile--font-weight: 700;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+  .text-gradient {
+    background: linear-gradient(to right, #0084D1, #00AFA0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pattern-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 24px 24px;
+  }
+}
+
+@theme {
+  --animate-gradient: gradient 3s ease infinite;
+  --animate-pattern: pattern-move 10s linear infinite;
 }
