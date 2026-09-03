@@ -47,7 +47,7 @@ export default function Navbar() {
            
             { name: "Pricing", href: "/#pricing" },
             { name: "Team", href: "/#team" },
-            { name: "Blog", href: "/blog" }
+            // { name: "Blog", href: "/blog" }
           ].map((item) => (
             <Link
               key={item.name}
@@ -100,7 +100,7 @@ export default function Navbar() {
             { name: "Case Studies", href: "/#case-studies" },
             { name: "Pricing", href: "/#pricing" },
             { name: "Team", href: "/#team" },
-            { name: "Blog", href: "/blog" }
+            // { name: "Blog", href: "/blog" }
           ].map((item) => (
             <Link
               key={item.name}

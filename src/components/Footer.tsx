@@ -128,7 +128,7 @@ export default function Footer() {
               Company
             </h4>
             <ul className="flex flex-col gap-4">
-              {["About Us", "Case Studies", "Careers", "Blog", "Contact Us", "Privacy Policy"].map((link, i) => (
+              {["About Us", "Case Studies", "Careers", /*"Blog",*/ "Contact Us", "Privacy Policy"].map((link, i) => (
                 <li key={i}>
                   <a href="#" className="text-slate-400 hover:text-white transition-colors text-[15px] font-medium">
                     {link}

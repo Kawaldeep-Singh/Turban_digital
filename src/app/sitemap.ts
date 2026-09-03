@@ -14,12 +14,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("Failed to fetch sanity posts for sitemap", error);
   }
 
+  /*
   const blogUrls = slugs.map((post: any) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post._updatedAt || new Date()),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
+  */
 
   const serviceUrls = servicesData.map((service) => ({
     url: `${baseUrl}/services/${service.id}`,
@@ -35,13 +37,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'yearly',
       priority: 1,
     },
+    /*
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    */
     ...serviceUrls,
-    ...blogUrls,
+    // ...blogUrls,
   ];
 }
