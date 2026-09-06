@@ -65,7 +65,7 @@ export default function SEOPage() {
           <p className="font-body-lg text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10">
             Stop relying solely on paid ads. Build a sustainable organic lead generation engine with our white-hat, data-driven SEO strategies.
           </p>
-          <Link href="/#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <a href="#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
             Get a Free SEO Audit
             <span className="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">
               arrow_forward
@@ -143,7 +143,7 @@ export default function SEOPage() {
           <div className="bg-gradient-to-r from-primary to-creative-purple p-10 rounded-[2rem] text-center text-white shadow-xl">
             <h2 className="text-3xl font-bold mb-4">Start Dominating Google Today</h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Let our SEO experts analyze your website and provide a custom strategy to increase your organic traffic.</p>
-            <Link href="/#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
+            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
               Request Your Free Audit
             </Link>
           </div>
@@ -154,3 +154,4 @@ export default function SEOPage() {
     </>
   );
 }
+

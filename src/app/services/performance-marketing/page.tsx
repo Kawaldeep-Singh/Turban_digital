@@ -65,7 +65,7 @@ export default function PerformanceMarketingPage() {
           <p className="font-body-lg text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10">
             Stop guessing with your marketing budget. We build high-converting funnels and data-driven ad campaigns that scale your business profitably.
           </p>
-          <Link href="/#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <a href="#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
             Audit My Ad Account
             <span className="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">
               arrow_forward
@@ -169,7 +169,7 @@ export default function PerformanceMarketingPage() {
           <div className="bg-gradient-to-r from-primary to-creative-purple p-10 rounded-[2rem] text-center text-white shadow-xl">
             <h2 className="text-3xl font-bold mb-4">Want to Scale Your Revenue?</h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Book a free discovery call, and we'll map out a custom performance marketing strategy for your business.</p>
-            <Link href="/#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
+            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
               Claim Your Free Strategy Session
             </Link>
           </div>
@@ -180,3 +180,4 @@ export default function PerformanceMarketingPage() {
     </>
   );
 }
+

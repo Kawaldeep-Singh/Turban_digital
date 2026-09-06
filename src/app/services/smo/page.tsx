@@ -65,7 +65,7 @@ export default function SMOPage() {
           <p className="font-body-lg text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10">
             Social media isn't just about posting; it's about building a community. We craft compelling social strategies that foster engagement, trust, and intense brand loyalty.
           </p>
-          <Link href="/#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <a href="#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
             Grow Your Audience
             <span className="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">
               arrow_forward
@@ -161,7 +161,7 @@ export default function SMOPage() {
           <div className="bg-gradient-to-r from-primary to-creative-purple p-10 rounded-[2rem] text-center text-white shadow-xl">
             <h2 className="text-3xl font-bold mb-4">Elevate Your Brand Today</h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Let our creative team craft a social media strategy that turns followers into loyal customers.</p>
-            <Link href="/#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
+            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
               Speak with a Strategist
             </Link>
           </div>
@@ -172,3 +172,4 @@ export default function SMOPage() {
     </>
   );
 }
+

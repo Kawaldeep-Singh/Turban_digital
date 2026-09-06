@@ -65,7 +65,7 @@ export default function AppDevelopmentPage() {
           <p className="font-body-lg text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10">
             In a mobile-first world, your app needs to be flawless. We design and develop native and cross-platform applications that engage users and drive business growth.
           </p>
-          <Link href="/#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <a href="#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
             Discuss Your App Idea
             <span className="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">
               arrow_forward
@@ -185,7 +185,7 @@ export default function AppDevelopmentPage() {
           <div className="bg-gradient-to-r from-primary to-creative-purple p-10 rounded-[2rem] text-center text-white shadow-xl">
             <h2 className="text-3xl font-bold mb-4">Ready to Build Your App?</h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Turn your vision into reality with our expert mobile app developers in Gurgaon.</p>
-            <Link href="/#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
+            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
               Schedule a Consultation
             </Link>
           </div>
@@ -196,3 +196,4 @@ export default function AppDevelopmentPage() {
     </>
   );
 }
+

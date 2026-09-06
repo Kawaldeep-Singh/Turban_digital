@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import StartupSupport from "@/components/StartupSupport";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
@@ -12,8 +13,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-[10px]">
+      <main>
         <Hero />
+        <StartupSupport />
         <Process />
         <Services />
         <Pricing />

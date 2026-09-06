@@ -65,7 +65,7 @@ export default function WebDevelopmentPage() {
           <p className="font-body-lg text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10">
             Your website is your 24/7 salesperson. We build lightning-fast, high-converting, and SEO-optimized web applications tailored to your business needs. 
           </p>
-          <Link href="/#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <a href="#contact" className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-creative-purple text-white font-bold text-[16px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
             Get a Free Proposal
             <span className="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">
               arrow_forward
@@ -159,7 +159,7 @@ export default function WebDevelopmentPage() {
           <div className="bg-gradient-to-r from-primary to-creative-purple p-10 rounded-[2rem] text-center text-white shadow-xl">
             <h2 className="text-3xl font-bold mb-4">Start Your Project Today</h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Let's build a website that not only looks stunning but performs exceptionally well on search engines.</p>
-            <Link href="/#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
+            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
               Contact Our Experts
             </Link>
           </div>
@@ -170,3 +170,4 @@ export default function WebDevelopmentPage() {
     </>
   );
 }
+

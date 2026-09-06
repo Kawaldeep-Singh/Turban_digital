@@ -59,7 +59,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-out border-b py-4 ${isSolid
         ? "bg-white/90 backdrop-blur-2xl shadow-sm border-slate-200/60"
-        : "bg-slate-900/10 backdrop-blur-md border-transparent"
+        : "bg-transparent border-transparent"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative">
