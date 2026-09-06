@@ -93,7 +93,7 @@ export const servicesData = [
     color: "from-violet-600 to-fuchsia-600"
   },
   {
-    id: "seo-optimization",
+    id: "seo",
     tag: "Top 3 Google Rank", 
     title: "SEO Optimization",
     subtitle: "Dominate search rankings and capture organic traffic.",
@@ -124,7 +124,7 @@ export const servicesData = [
     color: "from-emerald-600 to-teal-600"
   },
   {
-    id: "social-media",
+    id: "smo",
     tag: "10x Engagement", 
     title: "Social Media (SMO)",
     subtitle: "Build a brand audience that loves, shares, and buys.",

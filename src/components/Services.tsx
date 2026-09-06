@@ -19,9 +19,10 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {servicesData.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className="group flex flex-col rounded-[1.5rem] p-8 border border-slate-200 hover:border-slate-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 relative overflow-hidden bg-white z-10"
+              href={`/services/${service.id}`}
+              className="group flex flex-col rounded-[1.5rem] p-8 border border-slate-200 hover:border-slate-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 relative overflow-hidden bg-white z-10 cursor-pointer"
             >
               {/* Subtle Background Image */}
               <div className="absolute inset-0 z-0 pointer-events-none">
@@ -63,14 +64,14 @@ export default function Services() {
                   {service.description}
                 </p>
                 
-                <Link href={`/services/${service.id}`} className="inline-flex items-center text-[15px] font-bold text-slate-900 group-hover:text-primary transition-colors mt-auto">
+                <div className="inline-flex items-center text-[15px] font-bold text-slate-900 group-hover:text-primary transition-colors mt-auto">
                   Learn More
                   <span className="material-symbols-outlined ml-2 text-[18px] transform group-hover:translate-x-1.5 transition-transform duration-300">
                     arrow_forward
                   </span>
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
