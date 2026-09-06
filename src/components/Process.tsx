@@ -57,7 +57,7 @@ export default function Process() {
               <div className="bg-slate-800/50 backdrop-blur-md border border-slate-700/50 p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2 relative overflow-hidden h-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${step.color}"></div>
                 <h3 className="font-headline-sm text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                  <span className="text-slate-600 text-lg font-mono">{step.number}.</span> {step.title}
+                  <span className="text-slate-400 text-lg font-mono">{step.number}.</span> {step.title}
                 </h3>
                 <p className="font-body-md text-slate-400 leading-relaxed">
                   {step.description}

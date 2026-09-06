@@ -72,6 +72,8 @@ export default function Navbar() {
           <img
             src="/Logo.png"
             alt="Turban Digital Logo"
+            width="120"
+            height="80"
             className="h-20 -my-5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>

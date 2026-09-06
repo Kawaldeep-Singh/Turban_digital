@@ -4,31 +4,24 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden bg-slate-950">
-      <style>{`
-        @keyframes pan-grid {
-          0% { background-position: 0 0; }
-          100% { background-position: 48px 48px; }
-        }
-      `}</style>
       {/* Immersive Animated Background */}
       <div className="absolute inset-0 z-0">
-        {/* Deep background image (optional, kept very subtle) */}
+        {/* Deep background */}
         <div className="absolute inset-0 bg-slate-950"></div>
         
-        {/* Glowing Orbs for that premium tech feel */}
+        {/* Glowing Orbs */}
         <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] rounded-full bg-primary/20 blur-[150px] mix-blend-screen animate-[pulse_8s_ease-in-out_infinite]"></div>
         <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-creative-purple/20 blur-[120px] mix-blend-screen animate-[pulse_10s_ease-in-out_infinite_reverse]"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-emerald-500/10 blur-[100px] mix-blend-screen"></div>
         
-        {/* Animated Tech Grid Overlay */}
+        {/* Static Tech Grid Overlay - uses transform for compositing */}
         <div 
-          className="absolute inset-0 opacity-[0.15] pointer-events-none"
+          className="absolute inset-0 opacity-[0.12] pointer-events-none"
           style={{ 
             backgroundImage: "linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)", 
             backgroundSize: "48px 48px",
             maskImage: "radial-gradient(ellipse 100% 100% at 50% 50%, black 10%, transparent 80%)",
-            WebkitMaskImage: "radial-gradient(ellipse 100% 100% at 50% 50%, black 10%, transparent 80%)",
-            animation: "pan-grid 15s linear infinite"
+            WebkitMaskImage: "radial-gradient(ellipse 100% 100% at 50% 50%, black 10%, transparent 80%)"
           }}
         ></div>
       </div>

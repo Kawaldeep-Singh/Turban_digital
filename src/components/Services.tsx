@@ -28,8 +28,11 @@ export default function Services() {
               <div className="absolute inset-0 z-0 pointer-events-none">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src={service.heroImage} 
+                  src={service.heroImage?.replace('w=2072', 'w=600').replace('w=2426', 'w=600').replace('w=2070', 'w=600').replace('w=1974', 'w=600')} 
                   alt="" 
+                  loading="lazy"
+                  width="600"
+                  height="400"
                   className="w-full h-full object-cover opacity-[0.03] group-hover:opacity-[0.12] transition-all duration-700 group-hover:scale-110 grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/95 group-hover:from-white/70 group-hover:to-white/90 transition-colors duration-500"></div>

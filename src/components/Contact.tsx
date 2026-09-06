@@ -88,10 +88,11 @@ export default function Contact() {
             <div className="bg-slate-800/80 backdrop-blur-xl p-6 sm:p-8 rounded-[2rem] border border-slate-700/50 shadow-2xl relative z-10">
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div>
-                  <label className="block text-[13px] font-bold text-slate-300 mb-1.5">
+                  <label htmlFor="name" className="block text-[13px] font-bold text-slate-300 mb-1.5">
                     Full Name
                   </label>
                   <input
+                    id="name"
                     type="text"
                     required
                     value={formData.name}
@@ -102,10 +103,11 @@ export default function Contact() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-[13px] font-bold text-slate-300 mb-1.5">
+                    <label htmlFor="phone" className="block text-[13px] font-bold text-slate-300 mb-1.5">
                       Phone Number
                     </label>
                     <input
+                      id="phone"
                       type="tel"
                       required
                       value={formData.phone}
@@ -115,10 +117,11 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-[13px] font-bold text-slate-300 mb-1.5">
+                    <label htmlFor="email" className="block text-[13px] font-bold text-slate-300 mb-1.5">
                       Email Address
                     </label>
                     <input
+                      id="email"
                       type="email"
                       required
                       value={formData.email}
@@ -129,10 +132,11 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-[13px] font-bold text-slate-300 mb-1.5">
+                  <label htmlFor="service" className="block text-[13px] font-bold text-slate-300 mb-1.5">
                     Service Required
                   </label>
                   <select
+                    id="service"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white focus:bg-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 font-medium appearance-none text-[14px]"
@@ -145,10 +149,11 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[13px] font-bold text-slate-300 mb-1.5">
+                  <label htmlFor="message" className="block text-[13px] font-bold text-slate-300 mb-1.5">
                     Project Details
                   </label>
                   <textarea
+                    id="message"
                     rows={3}
                     required
                     value={formData.message}
