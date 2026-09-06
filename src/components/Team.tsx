@@ -1,6 +1,6 @@
 
 export default function Team() {
-  // test???
+  // te
   const teamMembers = [
     {
       name: "Lovedeep",
