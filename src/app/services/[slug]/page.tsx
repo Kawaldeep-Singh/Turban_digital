@@ -97,7 +97,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     {service.description}
                   </p>
                   
-                  <Link 
+                  <a 
                     href="#contact"
                     className={`inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r ${service.color} text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
                   >
