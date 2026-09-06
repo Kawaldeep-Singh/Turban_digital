@@ -42,9 +42,9 @@ export default function Footer() {
       
       {/* Background Design Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Animated Grid */}
+                {/* Static Grid - no animation to avoid non-composited jank */}
         <div 
-          className="absolute inset-0 opacity-[0.03] animate-pattern"
+          className="absolute inset-0 opacity-[0.03]"
           style={{ 
             backgroundImage: "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)", 
             backgroundSize: "64px 64px",
@@ -71,10 +71,12 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col gap-6">
             <a href="#" className="flex items-center -ml-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/Logo.png" 
                 alt="Turban Digital Logo" 
+                width="160"
+                height="128"
                 className="h-28 md:h-32 w-auto object-contain hover:scale-105 transition-transform duration-300"
               />
             </a>
@@ -101,9 +103,9 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h4 className="font-bold text-white uppercase tracking-wider mb-6 text-[14px]">
+                      <p className="font-bold text-white uppercase tracking-wider mb-6 text-[14px]" role="heading" aria-level={3}>
               Capabilities
-            </h4>
+            </p>
             <ul className="flex flex-col gap-4">
               {[
                 "Performance Marketing",
@@ -124,9 +126,9 @@ export default function Footer() {
 
           {/* Company Column */}
           <div>
-            <h4 className="font-bold text-white uppercase tracking-wider mb-6 text-[14px]">
+                      <p className="font-bold text-white uppercase tracking-wider mb-6 text-[14px]" role="heading" aria-level={3}>
               Company
-            </h4>
+            </p>
             <ul className="flex flex-col gap-4">
               {["About Us", "Case Studies", "Careers", /*"Blog",*/ "Contact Us", "Privacy Policy"].map((link, i) => (
                 <li key={i}>
@@ -140,9 +142,9 @@ export default function Footer() {
 
           {/* Newsletter Column */}
           <div>
-            <h4 className="font-bold text-white uppercase tracking-wider mb-6 text-[14px]">
+                      <p className="font-bold text-white uppercase tracking-wider mb-6 text-[14px]" role="heading" aria-level={3}>
               Growth Insights
-            </h4>
+            </p>
             <p className="text-slate-400 mb-6 text-[15px] leading-relaxed">
               Join 5,000+ marketers receiving our weekly newsletter on scaling digital brands.
             </p>

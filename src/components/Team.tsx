@@ -77,13 +77,13 @@ export default function Team() {
 
               {/* Content Area */}
               <div className="px-6 pb-8 flex-grow flex flex-col items-center text-center">
-                <span className="text-[11px] font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full uppercase tracking-widest mb-4">
+                <span className="text-[11px] font-bold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full uppercase tracking-widest mb-4">
                   {member.department}
                 </span>
                 <h3 className="font-headline-sm text-2xl font-bold text-slate-900 mb-1 group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-[15px] text-creative-purple font-bold mb-4">{member.role}</p>
+                <p className="text-[15px] text-indigo-700 font-bold mb-4">{member.role}</p>
                 <p className="font-body-md text-slate-500 leading-relaxed mb-6">
                   {member.description}
                 </p>

@@ -10,7 +10,7 @@ export default function Pricing() {
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-[0.05] animate-pattern"
+          className="absolute inset-0 opacity-[0.05]"
           style={{ 
             backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", 
             backgroundSize: "32px 32px",

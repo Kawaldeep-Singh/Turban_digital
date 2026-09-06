@@ -43,7 +43,7 @@ export default function Hero() {
           <h1 className="font-headline-xl text-4xl md:text-5xl lg:text-[64px] leading-[1.05] text-white mb-4 font-bold tracking-tight animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-150 fill-mode-both">
             Scale Your Revenue. <br />
             <span className="text-slate-400">Crush Your </span> <br className="hidden md:block" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-creative-purple to-[#f472b6] animate-gradient bg-[length:200%_auto]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-creative-purple to-[#f472b6]">
               Competition.
             </span>
           </h1>

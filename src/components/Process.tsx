@@ -27,7 +27,7 @@ export default function Process() {
     <section className="bg-slate-900 py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-20 max-w-2xl mx-auto">
-          <p className="font-label-sm text-[14px] font-bold text-primary uppercase tracking-widest mb-4">How We Operate</p>
+          <p className="font-label-sm text-[14px] font-bold text-blue-400 uppercase tracking-widest mb-4">How We Operate</p>
           <h2 className="font-headline-lg text-4xl md:text-4xl font-bold text-white mb-6">
             A Proven System Built For Predictable Growth
           </h2>

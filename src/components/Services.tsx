@@ -7,7 +7,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
           <div className="max-w-2xl">
-            <p className="font-label-sm text-[14px] font-bold text-primary uppercase tracking-widest mb-4">Your Growth Arsenal</p>
+            <p className="font-label-sm text-[14px] font-bold text-blue-700 uppercase tracking-widest mb-4">Your Growth Arsenal</p>
             <h2 className="font-headline-lg text-4xl md:text-4xl font-bold text-slate-900 leading-tight">
               Everything You Need To <br /> Dominate Your Niche
             </h2>

@@ -59,11 +59,11 @@ const Counter = ({ target, prefix = "", suffix = "", colorClass = "" }: { target
 
 export default function Stats() {
   const stats = [
-    { target: 50, prefix: "↓", suffix: "%", label: "Cost Per Lead", color: "text-emerald-600" },
-    { target: 300, prefix: "↑", suffix: "%", label: "Organic Traffic", color: "text-primary" },
-    { target: 700, prefix: "↑", suffix: "%", label: "ROAS", color: "text-creative-purple" },
-    { target: 100, prefix: "↑", suffix: "%", label: "Social Engagement", color: "text-rose-500" },
-    { target: 50, prefix: "", suffix: "+", label: "Happy Clients", color: "text-amber-500", span: true }
+    { target: 50, prefix: "↓", suffix: "%", label: "Cost Per Lead", color: "text-emerald-700" },
+    { target: 300, prefix: "↑", suffix: "%", label: "Organic Traffic", color: "text-blue-700" },
+    { target: 700, prefix: "↑", suffix: "%", label: "ROAS", color: "text-indigo-700" },
+    { target: 100, prefix: "↑", suffix: "%", label: "Social Engagement", color: "text-rose-700" },
+    { target: 50, prefix: "", suffix: "+", label: "Happy Clients", color: "text-amber-700", span: true }
   ];
 
   return (
