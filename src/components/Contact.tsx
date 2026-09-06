@@ -38,6 +38,8 @@ export default function Contact() {
       setLoading(false);
     }
   };
+
+  // test//
   return (
     <section id="contact-section" className="py-20 bg-slate-900 relative overflow-hidden">
       {/* Decorative Blob */}
@@ -45,7 +47,7 @@ export default function Contact() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column: Content */}
           <div className="flex flex-col gap-5">
             <div>
@@ -60,7 +62,7 @@ export default function Contact() {
                 Stop leaving money on the table. Book a free strategy session, and we'll map out the exact digital blueprint you need to scale aggressively.
               </p>
             </div>
-            
+
             <div className="space-y-4 mt-2">
               {[
                 "Free comprehensive strategy audit",
@@ -77,12 +79,12 @@ export default function Contact() {
               ))}
             </div>
           </div>
-          
+
           {/* Right Column: Form */}
           <div className="relative">
             {/* Soft Glow behind form */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-creative-purple/20 blur-[60px] rounded-[2rem]"></div>
-            
+
             <div className="bg-slate-800/80 backdrop-blur-xl p-6 sm:p-8 rounded-[2rem] border border-slate-700/50 shadow-2xl relative z-10">
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div>
@@ -130,7 +132,7 @@ export default function Contact() {
                   <label className="block text-[13px] font-bold text-slate-300 mb-1.5">
                     Service Required
                   </label>
-                  <select 
+                  <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white focus:bg-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 font-medium appearance-none text-[14px]"
@@ -155,13 +157,13 @@ export default function Contact() {
                     className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white focus:bg-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 font-medium placeholder-slate-500 resize-none text-[14px]"
                   ></textarea>
                 </div>
-                
+
                 {status.message && (
                   <div className={`p-3 rounded-lg text-[13px] font-medium ${status.type === 'success' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-red-500/10 text-red-400 border border-red-500/20'}`}>
                     {status.message}
                   </div>
                 )}
-                
+
                 <button
                   type="submit"
                   disabled={loading}
