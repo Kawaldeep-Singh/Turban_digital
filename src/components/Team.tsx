@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function Team() {
+  // test???
   const teamMembers = [
     {
       name: "Lovedeep",
@@ -39,13 +40,13 @@ export default function Team() {
       {/* Background Subtle Elements */}
       <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
       <div className="absolute -left-40 top-40 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center mb-24 max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-primary font-bold text-[13px] uppercase tracking-widest mb-6 shadow-sm">
-            <span className="material-symbols-outlined text-[16px]">groups</span> 
+            <span className="material-symbols-outlined text-[16px]">groups</span>
             Our Experts
           </div>
           <h2 className="font-headline-lg text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
@@ -69,7 +70,7 @@ export default function Team() {
                 {/* Decorative overlay patterns inside banner */}
                 <div className="absolute inset-0 opacity-20 bg-[url('/grid.svg')] mix-blend-overlay"></div>
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/0 to-black/20"></div>
-                
+
                 {/* Frosted Glass Avatar */}
                 <div className="relative z-10 w-24 h-24 rounded-full bg-white/20 backdrop-blur-xl border border-white/30 flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-500">
                   <span className="font-headline-md text-3xl font-bold text-white tracking-wider">{member.initials}</span>
@@ -88,7 +89,7 @@ export default function Team() {
                 <p className="font-body-md text-slate-500 leading-relaxed mb-6">
                   {member.description}
                 </p>
-                
+
                 {/* Social Links */}
                 <div className="mt-auto flex items-center gap-3">
                   <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#0077B5] hover:bg-blue-50 transition-all hover:scale-110">
