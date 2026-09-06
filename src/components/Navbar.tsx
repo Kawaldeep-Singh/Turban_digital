@@ -18,6 +18,43 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navItems = [
+    { name: "About Us", href: "/about-us" },
+    { 
+      name: "Services", 
+      href: "/services",
+      subItems: [
+        { name: "Performance Marketing", href: "/services/performance-marketing" },
+        { name: "Web Development", href: "/services/web-development" },
+        { name: "App Development", href: "/services/app-development" },
+        { name: "SEO Optimization", href: "/services/seo" },
+        { name: "Social Media (SMO)", href: "/services/smo" },
+        { name: "Video Editing", href: "/services/video-editing" }
+      ]
+    },
+    { name: "Pricing", href: "/#pricing" },
+    { name: "Team", href: "/#team" },
+  ];
+
+  const mobileNavItems = [
+    { name: "About Us", href: "/about-us" },
+    { 
+      name: "Services", 
+      href: "/services",
+      subItems: [
+        { name: "Performance Marketing", href: "/services/performance-marketing" },
+        { name: "Web Development", href: "/services/web-development" },
+        { name: "App Development", href: "/services/app-development" },
+        { name: "SEO Optimization", href: "/services/seo" },
+        { name: "Social Media (SMO)", href: "/services/smo" },
+        { name: "Video Editing", href: "/services/video-editing" }
+      ]
+    },
+    { name: "Case Studies", href: "/#case-studies" },
+    { name: "Pricing", href: "/#pricing" },
+    { name: "Team", href: "/#team" },
+  ];
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-out border-b py-4 ${isSolid
@@ -37,28 +74,50 @@ export default function Navbar() {
             alt="Turban Digital Logo"
             className="h-20 -my-5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
-
         </Link>
 
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          {[
-           
-            { name: "Pricing", href: "/#pricing" },
-            { name: "Team", href: "/#team" },
-            // { name: "Blog", href: "/blog" }
-          ].map((item) => (
-            <Link
-              key={item.name}
-              className={`relative font-label-md text-[15px] font-semibold transition-colors group py-2 ${isSolid ? 'text-slate-600 hover:text-primary' : 'text-slate-300 hover:text-white'}`}
-              href={item.href}
-            >
-              {item.name}
-              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-t-full transition-all duration-300 group-hover:w-8 opacity-0 group-hover:opacity-100 ${isSolid ? 'bg-primary' : 'bg-white'}`}></span>
-            </Link>
+          {navItems.map((item) => (
+            item.subItems ? (
+              <div key={item.name} className="relative group py-2">
+                <Link
+                  href={item.href}
+                  className={`relative font-label-md text-[15px] font-semibold transition-colors flex items-center group-hover:text-primary ${isSolid ? 'text-slate-600' : 'text-slate-300 hover:text-white'}`}
+                >
+                  {item.name}
+                  <span className="material-symbols-outlined text-[18px] ml-0.5 opacity-70 group-hover:rotate-180 transition-transform">expand_more</span>
+                  <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-t-full transition-all duration-300 group-hover:w-8 opacity-0 group-hover:opacity-100 ${isSolid ? 'bg-primary' : 'bg-white'}`}></span>
+                </Link>
+                <div className="absolute top-full -left-6 pt-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                  <div className="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden flex flex-col p-3 gap-1">
+                    {item.subItems.map(sub => (
+                      <Link 
+                        key={sub.name} 
+                        href={sub.href} 
+                        className="px-4 py-2.5 hover:bg-slate-50 rounded-xl text-slate-700 hover:text-primary transition-colors text-[14px] font-semibold flex items-center justify-between group/sub"
+                      >
+                        {sub.name}
+                        <span className="material-symbols-outlined text-[16px] opacity-0 -translate-x-2 group-hover/sub:opacity-100 group-hover/sub:translate-x-0 transition-all text-primary">chevron_right</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.name}
+                className={`relative font-label-md text-[15px] font-semibold transition-colors group py-2 flex items-center ${isSolid ? 'text-slate-600 hover:text-primary' : 'text-slate-300 hover:text-white'}`}
+                href={item.href}
+              >
+                {item.name}
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-t-full transition-all duration-300 group-hover:w-8 opacity-0 group-hover:opacity-100 ${isSolid ? 'bg-primary' : 'bg-white'}`}></span>
+              </Link>
+            )
           ))}
         </div>
+
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
@@ -76,6 +135,7 @@ export default function Navbar() {
               </span>
             </a>
           </div>
+          
 
           {/* Mobile Menu Button */}
           <button
@@ -91,25 +151,34 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl transition-all duration-300 ease-in-out origin-top ${mobileMenuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 h-0"
+        className={`md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-2xl transition-all duration-300 ease-in-out origin-top max-h-[85vh] overflow-y-auto ${mobileMenuOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 h-0"
           }`}
       >
-        <div className="flex flex-col px-6 py-6 gap-3">
-          {[
-            { name: "Services", href: "/#services" },
-            { name: "Case Studies", href: "/#case-studies" },
-            { name: "Pricing", href: "/#pricing" },
-            { name: "Team", href: "/#team" },
-            // { name: "Blog", href: "/blog" }
-          ].map((item) => (
-            <Link
-              key={item.name}
-              className="px-6 py-4 font-label-md text-lg font-semibold text-slate-700 hover:bg-primary/5 hover:text-primary rounded-2xl transition-colors"
-              href={item.href}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
+        <div className="flex flex-col px-6 py-6 gap-2">
+          {mobileNavItems.map((item) => (
+            <div key={item.name} className="flex flex-col">
+              <Link
+                className="px-6 py-3.5 font-label-md text-lg font-semibold text-slate-700 hover:bg-primary/5 hover:text-primary rounded-2xl transition-colors flex justify-between items-center"
+                href={item.href}
+                onClick={() => !item.subItems && setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+              {item.subItems && (
+                <div className="flex flex-col pl-6 mt-1 border-l-[3px] border-slate-100 ml-10 gap-1 mb-2">
+                  {item.subItems.map(sub => (
+                    <Link 
+                      key={sub.name} 
+                      href={sub.href} 
+                      onClick={() => setMobileMenuOpen(false)} 
+                      className="px-4 py-2.5 text-[15px] font-semibold text-slate-500 hover:text-primary hover:bg-primary/5 rounded-xl transition-colors"
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           <a
             className="mt-4 flex items-center justify-center w-full px-6 py-4 font-label-md text-lg font-semibold text-white rounded-2xl bg-gradient-to-r from-primary to-creative-purple shadow-xl"

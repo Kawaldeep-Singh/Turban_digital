@@ -1,16 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden">
       {/* Immersive Background Image */}
       <div className="absolute inset-0 z-0 bg-slate-950">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          alt="Digital Marketing Agency"
-          className="absolute inset-0 w-full h-full object-cover opacity-40 animate-[scale-in_30s_linear_infinite]"
-          style={{ animation: 'pulse 20s infinite alternate' }}
+        <Image
           src="/indian_agency_hero.jpg"
+          alt="Digital Marketing Agency"
+          fill
+          priority
+          className="object-cover opacity-40 animate-[scale-in_30s_linear_infinite]"
+          style={{ animation: 'pulse 20s infinite alternate' }}
         />
         
         {/* Glowing Overlays */}

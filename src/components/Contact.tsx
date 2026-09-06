@@ -39,7 +39,7 @@ export default function Contact() {
     }
   };
   return (
-    <section id="contact" className="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="contact-section" className="py-20 bg-slate-900 relative overflow-hidden">
       {/* Decorative Blob */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
@@ -94,7 +94,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="John Doe"
+                    placeholder="Kawaldeep singh"
                     className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white focus:bg-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 font-medium placeholder-slate-500 text-[14px]"
                   />
                 </div>
@@ -108,7 +108,7 @@ export default function Contact() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+91 98765 43210"
+                      placeholder="9053608395"
                       className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white focus:bg-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 font-medium placeholder-slate-500 text-[14px]"
                     />
                   </div>
