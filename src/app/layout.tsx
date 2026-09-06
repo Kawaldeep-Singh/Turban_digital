@@ -113,9 +113,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${lexend.variable}`}>
       <head>
-        {/* Preconnect to Google Fonts for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Load Material Symbols non-blocking */}
         <link
           rel="stylesheet"

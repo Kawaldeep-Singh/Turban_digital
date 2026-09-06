@@ -109,7 +109,7 @@ export default function Hero() {
               </div>
               <span className="text-emerald-400 text-sm font-bold bg-emerald-400/10 px-3 py-1 rounded-full">+124%</span>
             </div>
-            <h3 className="text-slate-400 text-sm font-bold uppercase tracking-wider mb-1">Total Revenue Generated</h3>
+            <p className="text-slate-400 text-sm font-bold uppercase tracking-wider mb-1">Total Revenue Generated</p>
             <p className="text-white text-4xl font-bold mb-6 font-headline-lg">₹4.2 Cr</p>
             {/* Fake Chart Lines */}
             <div className="flex items-end gap-2 h-24 mt-4">

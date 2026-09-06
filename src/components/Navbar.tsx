@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -68,12 +69,12 @@ export default function Navbar() {
           className="flex items-center gap-3 group"
           href="/"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/Logo.png"
             alt="Turban Digital Logo"
-            width="120"
-            height="80"
+            width={120}
+            height={80}
+            priority
             className="h-20 -my-5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>

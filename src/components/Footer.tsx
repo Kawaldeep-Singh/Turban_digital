@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -71,12 +72,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col gap-6">
             <a href="#" className="flex items-center -ml-4">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img 
+                                                <Image 
                 src="/Logo.png" 
                 alt="Turban Digital Logo" 
-                width="160"
-                height="128"
+                width={160}
+                height={128}
                 className="h-28 md:h-32 w-auto object-contain hover:scale-105 transition-transform duration-300"
               />
             </a>
