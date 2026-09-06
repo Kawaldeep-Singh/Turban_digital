@@ -70,7 +70,7 @@ export default function SMOPage() {
             <span className="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">
               arrow_forward
             </span>
-          </Link>
+          </a>
         </section>
 
         {/* Section 2: Core Services */}
@@ -163,7 +163,7 @@ export default function SMOPage() {
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Let our creative team craft a social media strategy that turns followers into loyal customers.</p>
             <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
               Speak with a Strategist
-            </Link>
+            </a>
           </div>
         </section>
 

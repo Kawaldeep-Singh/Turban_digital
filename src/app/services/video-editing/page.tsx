@@ -70,7 +70,7 @@ export default function VideoEditingPage() {
             <span className="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">
               arrow_forward
             </span>
-          </Link>
+          </a>
         </section>
 
         {/* Section 2: Types of Videos */}
@@ -161,7 +161,7 @@ export default function VideoEditingPage() {
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Send us your raw footage and let our expert editors turn it into gold.</p>
             <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
               Discuss Your Video Needs
-            </Link>
+            </a>
           </div>
         </section>
 

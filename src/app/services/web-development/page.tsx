@@ -70,7 +70,7 @@ export default function WebDevelopmentPage() {
             <span className="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">
               arrow_forward
             </span>
-          </Link>
+          </a>
         </section>
 
         {/* Section 2: Services / What we offer */}
@@ -161,7 +161,7 @@ export default function WebDevelopmentPage() {
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Let's build a website that not only looks stunning but performs exceptionally well on search engines.</p>
             <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
               Contact Our Experts
-            </Link>
+            </a>
           </div>
         </section>
 

@@ -105,7 +105,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <span className="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">
                       arrow_forward
                     </span>
-                  </Link>
+                  </a>
                 </div>
               </div>
 
