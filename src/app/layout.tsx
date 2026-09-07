@@ -20,10 +20,12 @@ export const metadata: Metadata = {
     description: "Stop losing leads to competitors. We build digital engines that drive real revenue through SEO, Performance Marketing, and Web Development.",
     images: [
       {
-        url: "/Logo.png",
+        url: "https://www.turbandigitalstudio.in/Logo.png",
+        secureUrl: "https://www.turbandigitalstudio.in/Logo.png",
         width: 1200,
         height: 630,
         alt: "Turban Digital Studio",
+        type: "image/png",
       }
     ]
   },
