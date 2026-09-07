@@ -8,18 +8,55 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const pathname = usePathname();
   const isSolid = scrolled || pathname !== "/";
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
+      
+      if (pathname === "/") {
+        const sections = ["services", "case-studies", "pricing", "team", "contact"];
+        let current = "";
+
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              current = section;
+              break;
+            }
+          }
+        }
+        
+        if (!current && window.scrollY < 200) {
+          current = "home";
+        }
+        
+        setActiveSection(current);
+      }
     };
+    
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
+
+  const isActive = (href: string) => {
+    if (href === "/" && activeSection === "home" && pathname === "/") return true;
+    if (href === "/about-us" && pathname === "/about-us") return true;
+    if (href === "/services" && pathname.startsWith("/services")) return true;
+    if (href.includes("#") && pathname === "/") {
+      const hash = href.split("#")[1];
+      return activeSection === hash;
+    }
+    return false;
+  };
 
   const navItems = [
+    { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
     { 
       name: "Services", 
@@ -38,6 +75,7 @@ export default function Navbar() {
   ];
 
   const mobileNavItems = [
+    { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
     { 
       name: "Services", 
@@ -87,11 +125,11 @@ export default function Navbar() {
               <div key={item.name} className="relative group py-2">
                 <Link
                   href={item.href}
-                  className={`relative font-label-md text-[15px] font-semibold transition-colors flex items-center group-hover:text-primary ${isSolid ? 'text-slate-600' : 'text-slate-300 hover:text-white'}`}
+                  className={`relative font-label-md text-[15px] font-semibold transition-colors flex items-center group-hover:text-primary ${isSolid ? 'text-slate-600' : 'text-slate-300 hover:text-white'} ${isActive(item.href) ? '!text-primary' : ''}`}
                 >
                   {item.name}
                   <span className="material-symbols-outlined text-[18px] ml-0.5 opacity-70 group-hover:rotate-180 transition-transform">expand_more</span>
-                  <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-t-full transition-all duration-300 group-hover:w-8 opacity-0 group-hover:opacity-100 ${isSolid ? 'bg-primary' : 'bg-white'}`}></span>
+                  <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-t-full transition-all duration-300 group-hover:w-8 opacity-0 group-hover:opacity-100 ${isSolid ? 'bg-primary' : 'bg-white'} ${isActive(item.href) ? '!w-8 !opacity-100' : ''}`}></span>
                 </Link>
                 <div className="absolute top-full -left-6 pt-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                   <div className="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden flex flex-col p-3 gap-1">
@@ -111,11 +149,11 @@ export default function Navbar() {
             ) : (
               <Link
                 key={item.name}
-                className={`relative font-label-md text-[15px] font-semibold transition-colors group py-2 flex items-center ${isSolid ? 'text-slate-600 hover:text-primary' : 'text-slate-300 hover:text-white'}`}
+                className={`relative font-label-md text-[15px] font-semibold transition-colors group py-2 flex items-center ${isSolid ? 'text-slate-600 hover:text-primary' : 'text-slate-300 hover:text-white'} ${isActive(item.href) ? '!text-primary' : ''}`}
                 href={item.href}
               >
                 {item.name}
-                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-t-full transition-all duration-300 group-hover:w-8 opacity-0 group-hover:opacity-100 ${isSolid ? 'bg-primary' : 'bg-white'}`}></span>
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[3px] rounded-t-full transition-all duration-300 group-hover:w-8 opacity-0 group-hover:opacity-100 ${isSolid ? 'bg-primary' : 'bg-white'} ${isActive(item.href) ? '!w-8 !opacity-100' : ''}`}></span>
               </Link>
             )
           ))}
@@ -161,7 +199,7 @@ export default function Navbar() {
           {mobileNavItems.map((item) => (
             <div key={item.name} className="flex flex-col">
               <Link
-                className="px-6 py-3.5 font-label-md text-lg font-semibold text-slate-700 hover:bg-primary/5 hover:text-primary rounded-2xl transition-colors flex justify-between items-center"
+                className={`px-6 py-3.5 font-label-md text-lg font-semibold text-slate-700 hover:bg-primary/5 hover:text-primary rounded-2xl transition-colors flex justify-between items-center ${isActive(item.href) ? 'bg-primary/10 !text-primary' : ''}`}
                 href={item.href}
                 onClick={() => !item.subItems && setMobileMenuOpen(false)}
               >
