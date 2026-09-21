@@ -1,38 +1,16 @@
 
 export default function Team() {
   // te
-  const teamMembers = [
-    {
-      name: "Lovedeep",
-      role: "Founder & CEO",
-      department: "Leadership",
-      description: "Visionary leader driving the agency's growth and crafting winning client strategies.",
-      initials: "L",
-      bgClass: "bg-slate-900",
-      linkedin: "https://www.linkedin.com/in/lovedeep-singh-532380186/",
-      email: "777singhlovedeep@gmail.com"
-    },
-    {
-      name: "Kawaldeep Singh",
-      role: "Co-Founder",
-      department: "Operations",
-      description: "Operations mastermind focused on scaling the agency and ensuring flawless execution.",
-      initials: "KS",
-      bgClass: "bg-slate-900",
-      linkedin: "https://www.linkedin.com/in/kawaldeepsingh8395",
-      email: "kawaldeep8395@gmail.com"
-    },
-    {
-      name: "Prabhjot Singh",
-      role: "Lead Creative Designer",
-      department: "Creative",
-      description: "The creative genius behind our scroll-stopping designs and cinematic video edits.",
-      initials: "PS",
-      bgClass: "bg-slate-900",
-      linkedin: "#",
-      email: "hello@turbandigitalstudio.in"
-    },
-  ];
+  const teamMembers: Array<{
+    name: string;
+    role: string;
+    department: string;
+    description: string;
+    initials: string;
+    bgClass: string;
+    linkedin: string;
+    email: string;
+  }> = [];
 
   return (
     <section id="team" className="py-32 bg-white relative overflow-hidden">
